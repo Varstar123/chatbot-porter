@@ -1,0 +1,114 @@
+AI Voice Agent — Technical Assessment
+Objective
+Build a Porter-style voice-based AI booking agent.
+The goal is to create a voice agent that can have a natural conversation with a user who wants to book a transportation/moving service. The agent should understand the user's requirements, ask relevant questions when information is missing or unclear, maintain context throughout the conversation, and ultimately extract and present the user's complete requirements at the end.
+The focus of this assessment is the AI layer, not the UI or the plumbing. We want to see how you design an agent that turns a messy, unstructured voice conversation into a complete and correct set of booking requirements — and, more importantly, how it behaves when the conversation doesn't go cleanly.
+
+Voice Agent Expectations
+The agent should be able to:
+Understand the user's requirements through voice
+Have a natural, conversational interaction
+Ask relevant follow-up questions when necessary
+Identify missing or ambiguous information
+Remember information provided earlier in the conversation
+Handle information provided in any order
+Handle corrections or changes made by the user
+Avoid asking for information that has already been provided
+Determine when it has gathered sufficient information
+Extract the relevant requirements from the conversation
+Present the final requirements in a clear, structured format
+Allow the user to review and confirm the requirements
+
+Example
+A user might say:
+"I need to move a few things from Koramangala to Whitefield tomorrow evening."
+The agent should be able to understand that additional information is required and naturally continue the conversation to gather what is needed.
+The exact questions, conversation flow, required information, and data structure are left to the candidate to determine.
+We are intentionally not providing a predefined conversation flow or list of fields. We want to see how you approach the problem.
+Example
+A user might say:
+"I need to move a few things from Koramangala to Whitefield tomorrow evening."
+The agent should understand that additional information is required and naturally continue the conversation to gather what is needed.
+The exact questions, conversation flow, required information, and data structure are left to you. We are intentionally not providing a predefined conversation flow or list of fields. We want to see how you approach the problem.
+
+
+UI / Design
+UI design is not the primary focus of this assignment. The interface only needs to be clean, usable, and make it easy to interact with the voice agent and view the final requirements.
+You do not need to spend significant time creating a highly polished or production-grade UI. We will primarily evaluate the voice agent, conversational experience, requirement gathering, AI implementation, and engineering approach.
+
+
+Technical Expectations
+There is no prescribed technology stack.
+You may choose the technologies and architecture you believe are appropriate for the problem.
+You are free to choose:
+Frontend framework
+Backend technology
+AI/LLM provider
+Speech-to-text solution
+Text-to-speech solution
+Database/storage
+Hosting platform
+AI API credentials should be handled securely and should not be exposed in the client application.
+
+
+Evaluation Criteria
+We will primarily evaluate how the agent behaves when the conversation is difficult, not when it is easy.
+AI and conversation quality
+Understanding of user intent, including implied and partial information
+Naturalness of the conversation — does it feel like a booking assistant or a form being read aloud
+Context management across the full conversation
+Ability to identify what is missing, and to ask for it without repeating what it already knows
+Handling the negative paths (weighted heavily)
+Ambiguity — how the agent resolves vague input instead of guessing
+Corrections and contradictions — detecting them, confirming the right value, propagating the change
+Speech-to-text errors — recovering from mis-transcribed names, numbers, and dates
+Out-of-scope or impossible input — past dates, unserviceable routes, loads no vehicle can carry
+Silence, unusable audio, interruptions, and off-topic turns
+Behaviour under uncertainty — does the agent guess, confirm, or ask, and is that choice deliberate
+Engineering
+AI/LLM implementation — prompt design, state management, how structured data is extracted and validated
+Technical architecture and code quality
+Error handling and failure modes, including API failures and timeouts
+Accuracy and completeness of the final requirement summary
+Overall user experience
+There is no single expected implementation or conversation flow. We are interested in how you think about the problem, how you design the agent, and how effectively you turn an unstructured voice conversation into a complete set of actionable booking requirements.
+Submission
+Please submit the project as a GitHub repository.
+The repository should contain:
+Source code
+README
+Setup and installation instructions
+Required environment variables/configuration
+Brief explanation of your architecture and approach
+Any assumptions or known limitations
+Live Demo
+Please deploy the application so that we can directly test the voice agent.
+You may use Vercel, Netlify, or any other suitable hosting platform.
+Please include the live demo URL in the README.
+We should be able to open the URL and interact with the voice agent without needing to run the project locally.
+Submission Email
+Once completed, please share the following with:
+contact@repatria.in
+GitHub repository URL
+Live demo URL
+Any additional notes you would like us to know
+Timeline
+You may take up to one week to complete and submit the assignment.
+Please prioritize a functional and well-engineered voice agent over adding a large number of features.
+Evaluation Criteria
+We will primarily evaluate:
+Quality of the voice interaction
+Naturalness of the conversation
+Understanding of user intent
+Context management
+Ability to identify missing information
+Requirement gathering
+Handling of ambiguity and corrections
+Accuracy of the final requirement summary
+AI/LLM implementation
+Technical architecture
+Code quality
+Error handling
+Overall user experience
+There is no single expected implementation or conversation flow.
+We are interested in how you think about the problem, how you design the agent, and how effectively you turn an unstructured voice conversation into a complete set of actionable booking requirements.
