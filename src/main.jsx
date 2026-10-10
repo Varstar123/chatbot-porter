@@ -61,7 +61,11 @@ function App() {
   function speakText(text) {
     if (!text || !('speechSynthesis' in window)) return;
     speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
+    // Speak the requested number length as a word, leaving actual phone numbers intact.
+    const spokenText = text.replace(/\b10\s*[-\u2010-\u2015]?\s*digits?\b/gi, match =>
+      /digits$/i.test(match) ? 'ten digits' : 'ten digit'
+    );
+    const utterance = new SpeechSynthesisUtterance(spokenText);
     utterance.lang = 'en-IN'; utterance.rate = 1;
     speechSynthesis.speak(utterance);
   }
